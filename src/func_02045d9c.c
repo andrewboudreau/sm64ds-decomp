@@ -1,0 +1,1 @@
+C:\Users\bmanu\Documents\sm64ds-decomp\match\auto\0x02045d9c.c

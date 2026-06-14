@@ -1,0 +1,1 @@
+C:\Users\bmanu\Documents\sm64ds-decomp\match\auto\0x020672a4.c
