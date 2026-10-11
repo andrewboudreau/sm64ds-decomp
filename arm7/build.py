@@ -39,7 +39,9 @@ def tools_root():
     candidates = []
     if env:
         candidates.append(Path(env))
+    candidates.append(REPO / "tools" / "mwccarm")
     candidates.append(REPO.parent.parent / "decomp_SM64DS" / "tools" / "mwccarm")
+    candidates.append(Path.home() / "sm64ds" / "sm64ds-decomp" / "tools" / "mwccarm")
     candidates.append(Path(r"C:\Users\issus\Documents\SGH\decomps\decomp_SM64DS\tools\mwccarm"))
     for path in candidates:
         if (path / "license.dat").is_file():
@@ -48,6 +50,10 @@ def tools_root():
 
 
 def run(cmd, cwd):
+    # Non-Windows (Mac/Linux): run the .exe tools through wine, or MWCCARM_LAUNCHER if set.
+    launcher = os.environ.get("MWCCARM_LAUNCHER") or ("" if os.name == "nt" else "wine")
+    if launcher and str(cmd[0]).lower().endswith(".exe"):
+        cmd = launcher.split() + list(cmd)
     print("+", " ".join(str(c) for c in cmd))
     result = subprocess.run(cmd, cwd=str(cwd), text=True)
     if result.returncode != 0:
