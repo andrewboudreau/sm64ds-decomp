@@ -1,0 +1,3 @@
+# One file per job: arm7/swap.d/<JOB>.txt (e.g. AM7.txt). Same columns as swap.txt:
+# storage  size(hex, linked .text incl. trailing pool)  symbol  source  region
+# Only *.txt is read. Never edit another job's file.

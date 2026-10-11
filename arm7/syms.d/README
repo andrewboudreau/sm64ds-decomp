@@ -1,0 +1,3 @@
+# One file per job: arm7/syms.d/<JOB>.txt. Lines: name = 0xRUNTIMEADDR (no /* */).
+# Callees: fn_<storage> = <runtime>. Data: dat_<runtime> = <runtime> (or the name your C uses).
+# Same name in two jobs is fine only with the same value; a swapped C symbol overrides it automatically.

@@ -91,9 +91,37 @@ def gen(bin_path):
     print("generated asm, sha1", digest)
 
 
+def manifest_files(name, single):
+    """Shared single file (legacy) plus one file per job in <name>.d/ (no shared list to conflict on)."""
+    files = [HERE / single] if (HERE / single).is_file() else []
+    d = HERE / (name + ".d")
+    if d.is_dir():
+        files += sorted(d.glob("*.txt"))
+    return files
+
+
+def load_syms(swapped):
+    """Absolute symbols from syms.d/*.txt, one `name = 0xADDR` per line; dupes must agree; swapped C symbols win."""
+    syms = {"unk_38075A8": 0x038075A8}
+    for f in manifest_files("syms", "syms.txt"):
+        for line in f.read_text(encoding="utf-8").splitlines():
+            line = line.split("#", 1)[0].strip().rstrip(";")
+            if not line:
+                continue
+            name, value = [x.strip() for x in line.split("=")]
+            value = int(value, 0)
+            if syms.get(name, value) != value:
+                raise SystemExit("symbol %s defined twice with different values (%s)" % (name, f.name))
+            syms[name] = value
+    return {k: v for k, v in sorted(syms.items()) if k not in swapped}
+
+
 def load_swap():
     rows = []
-    for line in (HERE / "swap.txt").read_text(encoding="utf-8").splitlines():
+    lines = []
+    for f in manifest_files("swap", "swap.txt"):
+        lines += f.read_text(encoding="utf-8").splitlines()
+    for line in lines:
         line = line.split("#", 1)[0].strip()
         if not line:
             continue
@@ -198,7 +226,10 @@ def main():
         lines = ["MEMORY {"]
         for region, length in lengths.items():
             lines.append("    %s : ORIGIN = %s, LENGTH = 0x%X > %s.bin" % (region, origins[region], length, region))
-        lines += ["}", "", "SECTIONS {", "    unk_38075A8 = 0x038075A8;", ""]
+        swapped = {r["symbol"] for r in load_swap()}
+        lines += ["}", "", "SECTIONS {"]
+        lines += ["    %s = 0x%08X;" % kv for kv in load_syms(swapped).items()]
+        lines.append("")
         for region in ("crt0", "wram", "main", "tail"):
             lines.append("    .%s : {" % region)
             for name in lcf_objs[region]:
