@@ -7,108 +7,129 @@
   "boundary_confidence": "high",
   "boundary_evidence": [
     "NOT FROM tu_map. tools/tu_map.py reports the arm9 `main` module as UNDER-SEGMENTED, so there is no tu_map boundary or `tubuild.py create` candidate id here; every line below is hand-derived and independently checkable.",
-    "contiguous linker run 0x02016b78..0x02016fd4: the home entry covers the span (absorb/Model retires CleanCommonModelDataArr.c, func_02016e70.c, _ZN5Model23AddToCommonModelDataArrER8BMD_File.cpp and _ZN5Model14LoadAndSetFileEtii.cpp into it; config/arm9/delinks.txt, config/arm9/symbols.txt).",
+    "contiguous linker run 0x02016abc..0x02016fd4: the home entry covers the span (absorb/Model retires CleanCommonModelDataArr.c, func_02016e70.c, _ZN5Model23AddToCommonModelDataArrER8BMD_File.cpp and _ZN5Model14LoadAndSetFileEtii.cpp into it; absorb/Model-grow retires _ZN5Model12SetPolygonIDEi.cpp, func_02016acc.c and func_02016b24.c into it; config/arm9/delinks.txt, config/arm9/symbols.txt).",
     "class-label homogeneity: every symbol in the run is a member of Model (the concrete model class of include/Model.h, struct Model : ModelBase; _ZTV5Model at 0x0208e90c names the class, and the cartridge RTTI spells it _ZTI17dExtSimpleModel_c at 0x0208e794) plus the two file-global helpers the run brackets (CleanCommonModelDataArr, func_02016e70).",
-    "neighbour below: func_02016b24 ends at 0x02016b78, a free helper DoSetFile also calls. Neighbour above: ModelBase::SetFile at 0x02016fd4, the next block, out of this job."
+    "neighbour below: func_02016aac at 0x02016aac, a walled one-argument helper whose call cannot spell the three-parameter func_0204605c it targets; the grow stops before it. Neighbour above: ModelBase::SetFile at 0x02016fd4, the next block, out of this job."
   ],
   "sections": [
     {
       "name": ".text",
-      "start": "0x02016b78",
+      "start": "0x02016abc",
       "end": "0x02016fd4"
     }
   ],
   "functions": [
     {
+      "symbol": "_ZN5Model12SetPolygonIDEi",
+      "address": "0x02016abc",
+      "size": "0x00000010",
+      "legacy_source": "src/_ZN5Model12SetPolygonIDEi.cpp",
+      "ordinal": 0
+    },
+    {
+      "symbol": "func_02016acc",
+      "address": "0x02016acc",
+      "size": "0x00000058",
+      "legacy_source": "src/unnamed/arm9/0201/func_02016acc.c",
+      "ordinal": 1
+    },
+    {
+      "symbol": "func_02016b24",
+      "address": "0x02016b24",
+      "size": "0x00000054",
+      "legacy_source": "src/func_02016b24.c",
+      "ordinal": 2
+    },
+    {
       "symbol": "_ZN5Model6RenderEPK7Vector3",
       "address": "0x02016b78",
       "size": "0x00000040",
       "legacy_source": "src/_ZN5Model6RenderEPK7Vector3.cpp",
-      "ordinal": 0
+      "ordinal": 3
     },
     {
       "symbol": "_ZN5Model9Virtual10ER9Matrix4x3",
       "address": "0x02016bb8",
       "size": "0x00000040",
       "legacy_source": "src/_ZN5Model9Virtual10ER9Matrix4x3.cpp",
-      "ordinal": 1
+      "ordinal": 4
     },
     {
       "symbol": "_ZN5Model9DoSetFileEPcii",
       "address": "0x02016bf8",
       "size": "0x000000a0",
       "legacy_source": "src/_ZN5Model9DoSetFileEPcii.cpp",
-      "ordinal": 2
+      "ordinal": 5
     },
     {
       "symbol": "_ZN5Model11UpdateVertsEv",
       "address": "0x02016c98",
       "size": "0x00000010",
       "legacy_source": "src/_ZN5Model11UpdateVertsEv.cpp",
-      "ordinal": 3
+      "ordinal": 6
     },
     {
       "symbol": "_ZN5ModelD2Ev",
       "address": "0x02016ca8",
       "size": "0x00000038",
       "legacy_source": "src/_ZN5ModelD2Ev.cpp",
-      "ordinal": 4
+      "ordinal": 7
     },
     {
       "symbol": "_ZN5ModelD0Ev",
       "address": "0x02016ce0",
       "size": "0x00000040",
       "legacy_source": "src/_ZN5ModelD0Ev.cpp",
-      "ordinal": 5
+      "ordinal": 8
     },
     {
       "symbol": "_ZN5ModelD1Ev",
       "address": "0x02016d20",
       "size": "0x00000038",
       "legacy_source": "src/_ZN5ModelD1Ev.cpp",
-      "ordinal": 6
+      "ordinal": 9
     },
     {
       "symbol": "_ZN5ModelC1Ev",
       "address": "0x02016d58",
       "size": "0x00000050",
       "legacy_source": "src/_ZN5ModelC1Ev.cpp",
-      "ordinal": 7
+      "ordinal": 10
     },
     {
       "symbol": "_ZN5ModelC2Ev",
       "address": "0x02016da8",
       "size": "0x00000050",
       "legacy_source": "src/_ZN5ModelC2Ev.cpp",
-      "ordinal": 8
+      "ordinal": 11
     },
     {
       "symbol": "CleanCommonModelDataArr",
       "address": "0x02016df8",
       "size": "0x00000078",
       "legacy_source": "src/CleanCommonModelDataArr.c",
-      "ordinal": 9
+      "ordinal": 12
     },
     {
       "symbol": "func_02016e70",
       "address": "0x02016e70",
       "size": "0x00000098",
       "legacy_source": "src/unnamed/arm9/0201/func_02016e70.c",
-      "ordinal": 10
+      "ordinal": 13
     },
     {
       "symbol": "_ZN5Model23AddToCommonModelDataArrER8BMD_File",
       "address": "0x02016f08",
       "size": "0x00000094",
       "legacy_source": "src/_ZN5Model23AddToCommonModelDataArrER8BMD_File.cpp",
-      "ordinal": 11
+      "ordinal": 14
     },
     {
       "symbol": "_ZN5Model14LoadAndSetFileEtii",
       "address": "0x02016f9c",
       "size": "0x00000038",
       "legacy_source": "src/_ZN5Model14LoadAndSetFileEtii.cpp",
-      "ordinal": 12
+      "ordinal": 15
     }
   ],
   "data": [],
@@ -129,7 +150,8 @@
     "The file is written ROM-descending because mwccarm emits .text in reverse source order under default deferred codegen; the emitted object carries the nine functions ascending 0x02016b78..0x02016df8.",
     "The cartridge spells this class dExtSimpleModel_c and its vtable is homed under the project spelling _ZTV5Model at 0x0208e90c, so _ZTS/_ZTI records emitted under the project's Model spelling would have no configured ROM home. This TU therefore compiles with #pragma RTTI off, the same lever the merged ShadowModel and MaterialChanger folds use for the identical dExt* coined-name situation: no RTTI records are emitted, and the vtable preamble's typeinfo word deadstrips with the rest of the .data output.",
     "common.h precedes Model.h so this TU sees the flat Matrix4x3 { s32 m[12]; } spelling: the ctor's `mat4x3 = IDENTITY_MATRIX4X3` block-moves twelve words under it, where the structured Matrix3x3+Vector3 spelling scalarizes into a longer sequence. Virtual10 keeps the same flat view for its twelve-word copy into data.transforms.",
-    "absorb/Model grows the TU forward to 0x02016fd4 (CleanCommonModelDataArr, func_02016e70, AddToCommonModelDataArr, LoadAndSetFileEtii; the file stays ROM-descending). CleanCommonModelDataArr enrols corrected: the ROM calls the delete veneer func_0203cbc0 at +0x28 (relocs.txt), not the global _ZdlPv the unenrolled shard named. Below 0x02016b78 stays separate, walled by the one-argument func_02016aac call into three-parameter func_0204605c."
+    "absorb/Model grows the TU forward to 0x02016fd4 (CleanCommonModelDataArr, func_02016e70, AddToCommonModelDataArr, LoadAndSetFileEtii; the file stays ROM-descending). CleanCommonModelDataArr enrols corrected: the ROM calls the delete veneer func_0203cbc0 at +0x28 (relocs.txt), not the global _ZdlPv the unenrolled shard named. Below 0x02016b78 stays separate, walled by the one-argument func_02016aac call into three-parameter func_0204605c.",
+    "absorb/Model-grow extends the TU downward to 0x02016abc (SetPolygonID, func_02016acc, func_02016b24; the file stays ROM-descending, so the new definitions append after Render with the lowest address last). DoSetFile already called both neighbours: SetPolygonID directly and func_02016b24 through a local extern, which the grow re-spells to the helper's true (Obj *, u32) signature with a cast at the call site; the struct Obj definition moves into this TU at the helper's address position."
   ],
   "relocations": [],
   "verification": {
@@ -137,8 +159,8 @@
     "toolchain": "tools/mwccarm/2004/b56/mwccarm.exe",
     "flags": "-O4,p -enum int -lang c++ -char signed -interworking -proc arm946e -gccext,on -msgstyle gcc -Cpp_exceptions off",
     "comparison": "tools/match.py extract_func+compare (bytes/relocs) AND tools/objisolate.py plan() (relocation type/addend) AND tools/reloc_audit.py check_destinations() (relocation target identity)",
-    "functions_matched": 13,
-    "functions_declared": 13,
+    "functions_matched": 16,
+    "functions_declared": 16,
     "compilerOnlyOutput": {
       "requested": [],
       "deadstripped": [],
@@ -160,6 +182,79 @@
       "functions_occur_in_expected_order": "PASS",
       "relocation_destinations_verified": "PASS"
     },
-    "object": "build/tu/arm9-Model/Model.o (gitignored)"
+    "object": "build/tu/arm9-Model/Model.o (gitignored)",
+    "linkcheck": {
+      "round": "tools/tubuild.py linkcheck -- scratch dsd delink+lcf, whole-tree mwccarm, mwldarm link, linked-range and module byte comparison, dsd check symbols --fail, full ROM build",
+      "result": "scratch-link-verified",
+      "scratch": "build/tu/arm9-Model/link (gitignored)",
+      "phases": {
+        "delink": true,
+        "lcf": true,
+        "compile": true,
+        "link": true,
+        "checkModules": true,
+        "checkSymbols": false,
+        "rom": true
+      },
+      "tuRange": {
+        "start": "0x02016abc",
+        "end": "0x02016fd4",
+        "differingBytes": 0,
+        "firstDiff": null
+      },
+      "tuRanges": [
+        {
+          "section": ".text",
+          "start": "0x02016abc",
+          "end": "0x02016fd4",
+          "differingBytes": 0,
+          "firstDiff": null
+        }
+      ],
+      "objectAudit": {
+        "counts": {
+          "LICENSED": 16
+        },
+        "emittedTextOrderIsRomAscending": true,
+        "nonLicensedSymbols": [],
+        "unlicensedSections": []
+      },
+      "nontextSectionOrder": {
+        "groups": [],
+        "objisolate": null,
+        "errors": null
+      },
+      "linkedStorageAliases": null,
+      "symbolCheckNewVsBaseline": [],
+      "symbolCheckErrors": [
+        "[ERROR] Symbol '_deq' in ITCM at 0x01ff9d40 not found in linked binary",
+        "[ERROR] Symbol 'data_020ad524' in ARM9 main at 0x020ad524 not found in linked binary",
+        "[ERROR] Symbol 'data_020ad560' in ARM9 main at 0x020ad560 not found in linked binary",
+        "[ERROR] Symbol 'func_01ff98f4' in ITCM at 0x01ff98f4 not found in linked binary",
+        "[ERROR] Symbol 'func_01ff99a4' in ITCM at 0x01ff99a4 not found in linked binary",
+        "[ERROR] Symbol 'func_01ff9d40' in ITCM at 0x01ff9d40 not found in linked binary",
+        "[ERROR] Symbol 'func_01ff9e2c' in ITCM at 0x01ff9e2c not found in linked binary",
+        "[ERROR] Symbol 'overlay_100' in ARM9 main at 0x00000064 not found in linked binary",
+        "[ERROR] Symbol 'overlay_102' in ARM9 main at 0x00000066 not found in linked binary"
+      ],
+      "symbolCheckBaselineErrors": [
+        "[ERROR] Symbol '_deq' in ITCM at 0x01ff9d40 not found in linked binary",
+        "[ERROR] Symbol 'data_020ad524' in ARM9 main at 0x020ad524 not found in linked binary",
+        "[ERROR] Symbol 'data_020ad560' in ARM9 main at 0x020ad560 not found in linked binary",
+        "[ERROR] Symbol 'func_01ff98f4' in ITCM at 0x01ff98f4 not found in linked binary",
+        "[ERROR] Symbol 'func_01ff99a4' in ITCM at 0x01ff99a4 not found in linked binary",
+        "[ERROR] Symbol 'func_01ff9d40' in ITCM at 0x01ff9d40 not found in linked binary",
+        "[ERROR] Symbol 'func_01ff9e2c' in ITCM at 0x01ff9e2c not found in linked binary",
+        "[ERROR] Symbol 'overlay_100' in ARM9 main at 0x00000064 not found in linked binary",
+        "[ERROR] Symbol 'overlay_102' in ARM9 main at 0x00000066 not found in linked binary"
+      ],
+      "moduleSetSha256": "f9852ffaf80ef19662ab5535df4b13b935188ac3087b5b1d4561c089e4dd802b",
+      "rom": {
+        "bytes": 16777216,
+        "sha256": "ddab9300b24aeae254192c2a30d812b07ece3adff83230e75c865ed915c9de40",
+        "matchesStockRom": true
+      },
+      "linkerOutput": null
+    }
   }
 }

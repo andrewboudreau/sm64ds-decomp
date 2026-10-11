@@ -384,7 +384,7 @@
   "src/_ZN4cstd7strncpyEPcPKcj.cpp",
   "src/_ZN4cstd8__assertEPKcS1_S1_i.cpp",
   "src/_ZN5Model12HideMaterialEii.cpp",
-  "src/_ZN5Model12SetPolygonIDEi.cpp",
+  "src/engine/model/Model.cpp#_ZN5Model12SetPolygonIDEi",
   "src/_ZN5Model12ShowMaterialEii.cpp",
   "src/_ZN5Model13GetVramOffsetEj.cpp",
   "src/_ZN5Model13LoadTexAndPalER8BMD_File.cpp",

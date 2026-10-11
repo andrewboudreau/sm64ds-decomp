@@ -965,21 +965,9 @@ src/unnamed/arm9/0201/func_02016aac.c:
     complete
     .text start:0x02016aac end:0x02016abc
 
-src/_ZN5Model12SetPolygonIDEi.cpp:
-    complete
-    .text start:0x02016abc end:0x02016acc
-
-src/unnamed/arm9/0201/func_02016acc.c:
-    complete
-    .text start:0x02016acc end:0x02016b24
-
-src/func_02016b24.c:
-    complete
-    .text start:0x02016b24 end:0x02016b78
-
 src/engine/model/Model.cpp:
     complete
-    .text start:0x02016b78 end:0x02016fd4
+    .text start:0x02016abc end:0x02016fd4
 
 
 

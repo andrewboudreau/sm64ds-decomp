@@ -1,17 +1,18 @@
 //cpp
 /* Model -- the concrete model class; the cartridge calls it dExtSimpleModel_c
    (_ZTI17dExtSimpleModel_c at 0x0208e794, _ZTV5Model at 0x0208e90c). TU claims
-   0x02016b78..0x02016fd4: the home run in delinks order (Render, Virtual10,
+   0x02016abc..0x02016fd4: the home run in delinks order (Render, Virtual10,
    DoSetFile, UpdateVerts, then the full lifecycle D2,D0,D1,C1,C2) plus the
    forward stretch in delinks order (CleanCommonModelDataArr, func_02016e70,
    AddToCommonModelDataArr, LoadAndSetFileEtii) -- every emitted variant has a
-   cartridge home, so nothing deadstrips.
+   cartridge home, so nothing deadstrips -- grown downward to SetPolygonID,
+   func_02016acc and func_02016b24, the member and the two free helpers
+   bracketing it that DoSetFile calls.
    Written back-to-front: mwccarm emits .text in reverse source order under
    default deferred codegen.
-   Below 0x02016b78 stays put for now: ShowMaterial through func_02016b24 are
-   walled by func_02016aac, whose single-argument call cannot spell the
-   three-parameter func_0204605c it targets without changing bytes; rematching
-   that helper is separate work. */
+   Below 0x02016abc stays put: func_02016aac is walled, its single-argument
+   call cannot spell the three-parameter func_0204605c it targets without
+   changing bytes; rematching that helper is separate work. */
 
 /* common.h comes first so this TU sees the flat Matrix4x3 { s32 m[12]; }
    spelling: the ctor's mat4x3 = IDENTITY_MATRIX4X3 copy block-moves twelve
@@ -41,8 +42,13 @@ u32 func_02046564(BMD_File *file);
 void *_ZN6Memory13operator_new2Ej(u32 size);
 /* local extern: no header declares it; initializes ModelComponents over the file */
 void func_020462d0(ModelComponents *data, BMD_File *file, void *buffer);
-/* local extern: no header declares it; neighbour below this run */
-void func_02016b24(Model *self, int flags);
+/* local extern: no header declares it; SetPolygonID below passes ModelComponents */
+void func_02046008(ModelComponents *data, int id);
+/* struct Obj is defined at func_02016b24's address position below; the
+   forward declaration lets DoSetFile call it with its true signature */
+struct Obj;
+/* local extern: no header declares it; defined at its address position below */
+void func_02016b24(Obj *o, u32 mask);
 /* local extern: no header declares it; delete veneer for the transforms buffer */
 void func_0203cbc0(void *ptr);
 /* local extern: Heap.h declares this spelling; this TU keeps its own copy so the
@@ -185,7 +191,7 @@ int Model::DoSetFile(char *file_, int a, int b)
     if (buffer == 0) return 0;
     func_020462d0(&data, file, buffer);
     data.UpdateVertsUsingBones();
-    if (a != 0) func_02016b24(this, 0x8000);
+    if (a != 0) func_02016b24((Obj *)this, 0x8000);
     if (b < 0) return 1;
     SetPolygonID(b & 0xff);
     return 1;
@@ -208,4 +214,47 @@ void Model::Render(const Vector3 *scale)
     Matrix4x3 temp;
     MulMat4x3Mat4x3(&mat4x3, &data_0209b3ec, &temp);
     data.Render(&temp, (Vector3 *)scale);
+}
+
+/* Material-flag setter DoSetFile calls: ORs the mask into every entry's
+   word at +0x24, walking 0x30-byte records. Body verbatim from the
+   one-function shard; types.h comes from common.h above. */
+// @symbol func_02016b24
+struct Obj {
+    char pad[8];
+    char* p8;
+    char* pc;
+};
+
+extern "C" void func_02016b24(struct Obj* o, u32 mask)
+{
+    u32 count = *(u32*)(o->p8 + 0x24);
+    char* p = o->pc;
+    u32 i;
+    for (i = 0; i < count; i++) {
+        *(u32*)(((int)p + 0x24)) |= mask;
+        p += 0x30;
+    }
+}
+
+/* Material-flag clearer, the mirror image: ANDs the inverted mask into the
+   same word of the same records. Body verbatim from the one-function shard. */
+// @symbol func_02016acc
+extern "C" void func_02016acc(char *a0, unsigned int mask)
+{
+    char *p = *(char **)(a0 + 8);
+    unsigned int n = *(unsigned int *)(p + 0x24);
+    char *q = *(char **)(a0 + 0xc);
+
+    for (unsigned int i = 0; i < n; i++) {
+        unsigned int nmask = ~mask;
+        *(unsigned int *)(q + 0x24) &= nmask;
+        q += 0x30;
+    }
+}
+
+// @symbol _ZN5Model12SetPolygonIDEi
+void Model::SetPolygonID(int id)
+{
+    func_02046008(&data, id);
 }
