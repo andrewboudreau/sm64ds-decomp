@@ -1,0 +1,26 @@
+MEMORY {
+    crt0 : ORIGIN = 0x02380000, LENGTH = 0x00000168 > crt0.bin
+    wram : ORIGIN = 0x037F8000, LENGTH = 0x0000DF20 > wram.bin
+    main : ORIGIN = 0x027C0000, LENGTH = 0x00016A84 > main.bin
+    tail : ORIGIN = 0x023A4B0C, LENGTH = 0x00000018 > tail.bin
+}
+
+SECTIONS {
+    unk_38075A8 = 0x038075A8;
+
+    .crt0 : {
+        crt0_0.o(.text)
+    } > crt0
+
+    .wram : {
+        wram_0.o(.text)
+    } > wram
+
+    .main : {
+        main_0.o(.text)
+    } > main
+
+    .tail : {
+        tail_0.o(.text)
+    } > tail
+}

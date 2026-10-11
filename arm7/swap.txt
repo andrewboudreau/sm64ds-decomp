@@ -1,0 +1,9 @@
+# Functions build.py --swap compiles in place of the asm bytes.
+# storage  size  symbol  source  region
+# size is the linked .text, including a literal pool that sits in the
+# gap after the listed epilogue. AT7's list row is 0x38; the pool word
+# at storage 0x02385F28 makes the object 0x3C, and the next function
+# starts at 0x02385F2C.
+02381698 20 fn_02381698 src/02381698.c wram
+02385EF0 3C fn_02385EF0 src/02385EF0.c wram
+02395354 34 fn_02395354 src/02395354.c main
