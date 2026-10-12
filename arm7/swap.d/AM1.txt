@@ -1,0 +1,15 @@
+# AM1 (pack 2, wram 02380194..02380924): storage size symbol source region.
+# size is the linked .text including a trailing literal pool in the gap.
+# 02380194 stays asm (near-miss documented in agent-tools/arm7/p3/AM1.md).
+02380214 C0 fn_02380214 src/02380214.c wram
+023802D4 F4 fn_023802D4 src/023802D4.c wram
+023803C8 A0 fn_023803C8 src/023803C8.c wram
+02380468 12C fn_02380468 src/02380468.c wram
+02380594 10 fn_02380594 src/02380594.c wram
+023805A4 54 fn_023805A4 src/023805A4.c wram
+02380714 58 fn_02380714 src/02380714.c wram
+023807EC 94 fn_023807EC src/023807EC.c wram
+02380880 04 fn_02380880 src/02380880.c wram
+02380884 3C fn_02380884 src/02380884.c wram
+023808C0 38 fn_023808C0 src/023808C0.c wram
+023808F8 34 fn_023808F8 src/023808F8.c wram

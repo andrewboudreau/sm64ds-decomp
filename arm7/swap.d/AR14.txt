@@ -1,0 +1,4 @@
+# AR14: ARM7 P3 second pass, 02389D84/02389F30/0238A02C/0238A648 (AM25 misses).
+# 0/4 matched — all stay asm. See agent-tools/arm7/p3/AR14.md for per-function
+# shapes tried and wall analysis (all failures are deterministic allocator /
+# folder fixed points, verified across 40+ new shapes, IDA-reloc audited).

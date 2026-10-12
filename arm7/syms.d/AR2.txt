@@ -1,0 +1,2 @@
+# AR2 absolute symbols. name = runtime. No block comments.
+dword_380581C = 0x0380581C

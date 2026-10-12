@@ -1,0 +1,11 @@
+# JOB AM8 absolute symbols: external callees (fn_<callee storage> = runtime)
+# and data/pool addresses used by this job's C files. In-pack callees
+# (fn_02382874, fn_023828BC, fn_02382A0C, fn_02382A80, fn_02382AC4, fn_02382AD8)
+# resolve from this job's own swapped objects, so they need no entry here.
+fn_02380884 = 0x037F871C
+fn_02382558 = 0x037FA3F0
+fn_02380978 = 0x037F8810
+fn_023808C0 = 0x037F8758
+fn_02382B38 = 0x037FA9D0
+unk_3806FEC = 0x03806FEC
+unk_3806FF0 = 0x03806FF0

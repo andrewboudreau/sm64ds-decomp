@@ -1,0 +1,21 @@
+# AM38 absolute symbols: out-of-pack callees (no data words; all pools
+# are numeric constants). In-pack callees are overridden by swapped objects.
+# NOTE: group-S BL targets were first decoded with a PC+4 error (all 4 low);
+# corrected 2026-10-12 by decoding ROM BL words with PC+8 in runtime space
+# and diffing the swap link (13 single-byte BL-high-byte diffs). The separate
+# 03805CE0/03805D88 "mailbox lock" does not exist: those targets are the
+# alloc/send pair fn_0238DE4C/fn_0238DEF4, and fn_0238E684 is fn_0238E688.
+fn_02382724 = 0x037FA5BC
+fn_02382DC0 = 0x037FAC58
+fn_0238DE4C = 0x03805CE4
+fn_0238DEF4 = 0x03805D8C
+fn_0238E688 = 0x027C0600
+fn_0238FA8C = 0x027C1A04
+fn_0238FC90 = 0x027C1C08
+fn_0238FDBC = 0x027C1D34
+fn_02391698 = 0x027C3610
+fn_02392058 = 0x027C3FD0
+fn_023920F8 = 0x027C4070
+fn_02392BBC = 0x027C4B34
+fn_02393C1C = 0x027C5394
+fn_02393CA8 = 0x027C5C20

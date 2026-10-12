@@ -1,0 +1,12 @@
+# AR26 absolute symbols. All name->runtime pairs measured from ROM BL
+# words (PC=instr+8), not hand-computed. Reused at equal values (no rows):
+# AM39 fn_0238E688/fn_02392360/fn_0238DE4C/fn_0238DEF4/fn_02382810/
+# fn_02392B34. 239C pools (0x303/0x302) and 2724 pool (0x4000006) numeric.
+fn_02382D2C = 0x037FABC4
+fn_0238E2CC = 0x027C0244
+fn_0238FB00 = 0x027C1A78
+fn_0238FB70 = 0x027C1AE8
+fn_0238FB88 = 0x027C1B00
+fn_02390034 = 0x027C1FAC
+fn_0239045C = 0x027C23D4
+fn_02392ADC = 0x027C4A54

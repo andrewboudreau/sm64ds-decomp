@@ -1,0 +1,4 @@
+# AR32: second pass on 2 AM49 misses (main). 2004/b56 -O4,s. 2/2.
+# 81D0 has no calls/symbol pools: no syms rows.
+02397ED4 2FC fn_02397ED4 src/02397ED4.c main
+023981D0 188 fn_023981D0 src/023981D0.c main

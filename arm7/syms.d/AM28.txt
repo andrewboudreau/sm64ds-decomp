@@ -1,0 +1,21 @@
+# JOB AM28 absolute symbols: external callees (fn_<storage> = runtime)
+# and data/pool addresses used by this job's C files. In-pack swapped
+# callees (fn_0238B900, fn_0238BA10, fn_0238BD5C, fn_0238BCF0, fn_0238BCA4)
+# resolve from this job's own swapped objects, so they need no entry here.
+# fn_02388CD8 = 0x03800B70 per AM24 (asm thunk, verified by that pack's SHA).
+# fn_02383024 = 0x037FAEBC per AM10 (verified by that pack's SHA).
+# Value agreement checked against AM24 syms (82AC4/82AD8/882B0/883FC/883E0/883C8/88384/83024 all equal).
+fn_02382AC4 = 0x037FA95C
+fn_02382AD8 = 0x037FA970
+fn_023882B0 = 0x03800148
+fn_023883FC = 0x03800294
+fn_023883E0 = 0x03800278
+fn_023883C8 = 0x03800260
+fn_02388384 = 0x0380021C
+fn_023808C0 = 0x037F8758
+fn_02383024 = 0x037FAEBC
+fn_02388CD8 = 0x03800B70
+fn_0238B1D4 = 0x0380306C
+word_380986C = 0x0380986C
+dword_38098A8 = 0x038098A8
+unk_3805DF4 = 0x03805DF4

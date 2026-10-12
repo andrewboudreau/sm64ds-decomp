@@ -1,0 +1,15 @@
+# AR4 absolute symbols: out-of-pack callees + data, and in-pack
+# callees (swapped objects override the in-pack rows automatically).
+fn_023802C0 = 0x037F8758
+fn_02380378 = 0x037F8810
+fn_02381E94 = 0x037F9D2C
+fn_02381F60 = 0x037F9DF8
+fn_0238209C = 0x037F9F34
+fn_023821B0 = 0x037F9D48
+fn_0238231C = 0x037FA1B4
+fn_02382AC4 = 0x037FA95C
+fn_02382AD8 = 0x037FA970
+fn_02382B38 = 0x037FA9D0
+word_3806FD0 = 0x03806FD0
+dword_3806FD4 = 0x03806FD4
+dword_3806FD8 = 0x03806FD8

@@ -1,0 +1,3 @@
+# AR18 second pass. storage size symbol source region.
+0238C2D8 EC fn_0238C2D8 src/0238C2D8.c wram
+0238C9A8 11C fn_0238C9A8 src/0238C9A8.c wram

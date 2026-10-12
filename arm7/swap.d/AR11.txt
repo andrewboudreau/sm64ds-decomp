@@ -1,0 +1,2 @@
+# AR11 second pass. storage size symbol source region.
+02386970 5C fn_02386970 src/02386970.c wram

@@ -1,0 +1,16 @@
+# JOB AM8 (A7-P3 pack 4, wram 023825E4..02382AF0). storage size symbol source region.
+# Size is the linked .text incl. trailing literal pool (listed + gap to next fn).
+023825E4 140 fn_023825E4 src/023825E4.c wram
+02382724 88 fn_02382724 src/02382724.c wram
+023827AC 64 fn_023827AC src/023827AC.c wram
+02382810 64 fn_02382810 src/02382810.c wram
+02382874 48 fn_02382874 src/02382874.c wram
+023828BC E0 fn_023828BC src/023828BC.c wram
+0238299C 14 fn_0238299C src/0238299C.c wram
+023829B0 10 fn_023829B0 src/023829B0.c wram
+023829C0 4C fn_023829C0 src/023829C0.c wram
+02382A0C 74 fn_02382A0C src/02382A0C.c wram
+02382A80 30 fn_02382A80 src/02382A80.c wram
+02382AB0 14 fn_02382AB0 src/02382AB0.c wram
+02382AC4 14 fn_02382AC4 src/02382AC4.c wram
+02382AD8 18 fn_02382AD8 src/02382AD8.c wram

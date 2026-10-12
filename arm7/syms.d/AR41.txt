@@ -1,0 +1,3 @@
+# AR41 absolute symbols. name = runtime.
+fn_02395238 = 0x027C71B0
+fn_02395334 = 0x027C72AC

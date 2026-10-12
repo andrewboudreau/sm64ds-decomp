@@ -1,0 +1,15 @@
+# JOB AM14 (A7-P3 pack 6, wram 02383FCC..02384524). storage size symbol source region.
+# Size is the linked .text incl. trailing literal pool (listed + gap to next fn).
+02383FCC 88 fn_02383FCC src/02383FCC.c wram
+023840A4 70 fn_023840A4 src/023840A4.c wram
+02384114 10 fn_02384114 src/02384114.c wram
+02384124 24 fn_02384124 src/02384124.c wram
+02384148 7C fn_02384148 src/02384148.c wram
+023841C4 3C fn_023841C4 src/023841C4.c wram
+02384200 F8 fn_02384200 src/02384200.c wram
+023842F8 C8 fn_023842F8 src/023842F8.c wram
+023843C0 14 fn_023843C0 src/023843C0.c wram
+023843D4 134 fn_023843D4 src/023843D4.c wram
+02384508 10 fn_02384508 src/02384508.c wram
+02384518 C fn_02384518 src/02384518.c wram
+02384524 1C fn_02384524 src/02384524.c wram

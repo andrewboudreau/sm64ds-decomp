@@ -1,0 +1,6 @@
+# AR17: second pass on 4 AM29 misses (wram). 2004/b56 -O4,s. 4/4.
+# 098+0A8 are one fall-through call sequence split across two symbols.
+0238C088 10 fn_0238C088 src/0238C088.c wram
+0238C098 10 fn_0238C098 src/0238C098.c wram
+0238C0A8 0C fn_0238C0A8 src/0238C0A8.c wram
+0238C1C8 AC fn_0238C1C8 src/0238C1C8.c wram

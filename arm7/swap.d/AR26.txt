@@ -1,0 +1,3 @@
+# AR26: second pass on 2 AM39 misses (main). 2004/b56 -O4,s. 2/2.
+0239239C 190 fn_0239239C src/0239239C.c main
+02392724 7C fn_02392724 src/02392724.c main

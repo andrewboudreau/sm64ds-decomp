@@ -1,0 +1,5 @@
+# AR18 absolute symbols. name = runtime.
+dword_38098C4 = 0x038098C4
+fn_023808F8 = 0x037F8790
+fn_0238C1C8 = 0x03804060
+fn_0238BD84 = 0x03803C1C

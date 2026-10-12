@@ -1,0 +1,3 @@
+# AR11 absolute symbols. name = runtime.
+byte_3808544 = 0x03808544
+fn_0238219C = 0x037FA034

@@ -1,0 +1,7 @@
+# AR17 absolute symbols: out-of-pack callees (canonical fn_<storage> names).
+# fn_02382B38 (098's second call) resolves via the base AM29 row (equal value).
+fn_02381040 = 0x037F88D8
+fn_0238104C = 0x037F88E4
+fn_023810E4 = 0x037F897C
+fn_02381174 = 0x037F8A0C
+fn_023833CC = 0x037FB264

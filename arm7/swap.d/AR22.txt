@@ -1,0 +1,5 @@
+# AR22: second pass on 3 AM32 misses (main). 2004/b56 -O4,s. 3/3.
+# E844 needs no new rows (all callees in AM32 files).
+0238E694 17C fn_0238E694 src/0238E694.c main
+0238E844 184 fn_0238E844 src/0238E844.c main
+0238E9C8 144 fn_0238E9C8 src/0238E9C8.c main

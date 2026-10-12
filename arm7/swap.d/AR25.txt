@@ -1,0 +1,4 @@
+# AR25 second pass. storage size symbol source region.
+02390604 1DC fn_02390604 src/02390604.c main
+02391D90 104 fn_02391D90 src/02391D90.c main
+02391F54 104 fn_02391F54 src/02391F54.c main

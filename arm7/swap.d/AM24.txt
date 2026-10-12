@@ -1,0 +1,16 @@
+# AM24 (pack 11, wram 02388CD8..02389A6C): storage size symbol source region.
+# size is the linked .text including a trailing literal pool in the gap.
+# 02388CE8/02388F44/02389848 stay asm (near-misses documented in agent-tools/arm7/p3/AM24.md).
+02388CD8 10 fn_02388CD8 src/02388CD8.c wram
+02389288 1CC fn_02389288 src/02389288.c wram
+02389454 188 fn_02389454 src/02389454.c wram
+023895DC 1D4 fn_023895DC src/023895DC.c wram
+023897B0 3C fn_023897B0 src/023897B0.c wram
+023897EC 2C fn_023897EC src/023897EC.c wram
+02389818 30 fn_02389818 src/02389818.c wram
+02389874 24 fn_02389874 src/02389874.c wram
+02389898 C0 fn_02389898 src/02389898.c wram
+02389958 90 fn_02389958 src/02389958.c wram
+023899E8 1C fn_023899E8 src/023899E8.c wram
+02389A04 68 fn_02389A04 src/02389A04.c wram
+02389A6C 134 fn_02389A6C src/02389A6C.c wram

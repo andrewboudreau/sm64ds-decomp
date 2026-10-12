@@ -1,0 +1,2 @@
+# AR41 second pass. storage size symbol source region.
+023A43D8 AC fn_023A43D8 src/023A43D8.c main

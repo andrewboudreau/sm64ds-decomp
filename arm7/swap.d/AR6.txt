@@ -1,0 +1,4 @@
+# AR6: ARM7 P3 second pass, 023833BC + 02383410 (AM11 veneers). All 2004/b56 -O4,s.
+# 02382CE0/02382D2C/02382DC0 (SDK asm primitives) and 0238328C stay asm (see agent-tools/arm7/p3/AR6.md).
+023833BC 10 fn_023833BC src/023833BC.c wram
+02383410 10 fn_02383410 src/02383410.c wram

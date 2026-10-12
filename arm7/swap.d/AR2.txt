@@ -1,0 +1,2 @@
+# AR2 second pass. storage size symbol source region.
+02380194 80 fn_02380194 src/02380194.c wram

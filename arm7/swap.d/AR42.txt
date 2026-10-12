@@ -1,0 +1,4 @@
+# AR42: second pass on 2 P1 outliers (wram + main). 2004/b56 -O4,s. 2/2.
+# Neither needs syms rows (no calls; all pools numeric).
+023819B0 14 fn_023819B0 src/023819B0.c wram
+023963F0 50 fn_023963F0 src/023963F0.c main

@@ -1,0 +1,2 @@
+# AR34 second pass. storage size symbol source region.
+0239B89C 2C8 fn_0239B89C src/0239B89C.c main

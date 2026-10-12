@@ -1,0 +1,7 @@
+# AR32 absolute symbols. Callee storages verified 3 ways (brief's
+# 02385BE0/02385C74 are off by 0x10000): export filenames, delta math
+# (uniform main storage = runtime - 0x431F78), capstone prologues.
+fn_02395BE0 = 0x027C7B58
+fn_02395C74 = 0x027C7BEC
+dat_27D6734 = 0x027D6734
+dat_27D6768 = 0x027D6768

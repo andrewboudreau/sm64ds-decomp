@@ -1,0 +1,13 @@
+# AM10 absolute symbols: out-of-pack callees + data, and in-pack
+# callees (swapped objects override the in-pack rows automatically).
+fn_02382AC4 = 0x037FA95C
+fn_02382AD8 = 0x037FA970
+fn_02380978 = 0x037F8810
+fn_023808C0 = 0x037F8758
+fn_02382B28 = 0x037FA9C0
+fn_02382F04 = 0x037FAD9C
+fn_0238313C = 0x037FAFD4
+fn_02383210 = 0x037FB0A8
+fn_0238322C = 0x037FB0C4
+word_3807000 = 0x03807000
+unk_3807004 = 0x03807004

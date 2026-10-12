@@ -1,0 +1,2 @@
+# AR20: no absolute symbols — all three functions are reloc-free hand asm;
+# fn_0238DC7C is defined by its swapped object (overrides AM31 syms.d entry).

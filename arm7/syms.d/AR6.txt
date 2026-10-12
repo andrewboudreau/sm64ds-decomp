@@ -1,0 +1,2 @@
+# AR6 absolute symbols: none. Both veneers are leaf stubs (no BL, pool words
+# are pc-relative numeric offsets, no ABS32), so no symbols are needed.

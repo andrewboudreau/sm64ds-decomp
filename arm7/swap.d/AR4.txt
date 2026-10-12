@@ -1,0 +1,6 @@
+# AR4: second pass on 4 AM7 misses (wram). All 2004/b56 -O4,s. 4/4.
+# 023822A8 links at 0x74: the brief's 0x7C overshoots into sub_37FA1B4's prologue.
+02381FF8 94 fn_02381FF8 src/02381FF8.c wram
+0238208C 10 fn_0238208C src/0238208C.c wram
+0238222C 7C fn_0238222C src/0238222C.c wram
+023822A8 74 fn_023822A8 src/023822A8.c wram

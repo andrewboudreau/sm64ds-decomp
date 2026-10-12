@@ -1,0 +1,11 @@
+# JOB AM28 (A7-P3 pack 13, wram 0238B08C..0238BDCC). storage size symbol source region.
+# Size is the linked .text incl. trailing literal pool (listed + gap to next fn).
+# 8/13 matched 2004/b56 -O4,s; 0238B08C/0238B11C/0238B1D4/0238B8C0/0238BB20 stay asm (see p3/AM28.md).
+0238B900 110 fn_0238B900 src/0238B900.c wram
+0238BA10 110 fn_0238BA10 src/0238BA10.c wram
+0238B3E8 25C fn_0238B3E8 src/0238B3E8.c wram
+0238B644 27C fn_0238B644 src/0238B644.c wram
+0238BCA4 4C fn_0238BCA4 src/0238BCA4.c wram
+0238BCF0 6C fn_0238BCF0 src/0238BCF0.c wram
+0238BD5C 28 fn_0238BD5C src/0238BD5C.c wram
+0238BD84 48 fn_0238BD84 src/0238BD84.c wram

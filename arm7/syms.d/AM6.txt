@@ -1,0 +1,12 @@
+# AM6 absolute symbols: outside-pack callees, in-pack callees, data/MMIO pool names.
+fn_02382AC4 = 0x037FA95C
+fn_02382AD8 = 0x037FA970
+fn_0238092C = 0x037F87C4
+fn_02381E50 = 0x037F9CE8
+fn_02381D94 = 0x037F9C2C
+fn_02381E78 = 0x037F9D10
+unk_3806FA8 = 0x03806FA8
+word_3806FCC = 0x03806FCC
+qword_3806FD8 = 0x03806FD8
+dword_3806FD4 = 0x03806FD4
+word_3806FD0 = 0x03806FD0

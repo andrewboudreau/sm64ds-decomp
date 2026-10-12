@@ -1,0 +1,14 @@
+# AM9 (pack 4, wram 02382AF0..02382CE0): storage size symbol source region.
+# size is the linked .text including a trailing literal pool in the gap.
+02382AF0 14 fn_02382AF0 src/02382AF0.c wram
+02382B04 18 fn_02382B04 src/02382B04.c wram
+02382B1C C fn_02382B1C src/02382B1C.c wram
+02382B28 10 fn_02382B28 src/02382B28.c wram
+02382B38 14 fn_02382B38 src/02382B38.c wram
+02382B4C 30 fn_02382B4C src/02382B4C.c wram
+02382B7C 3C fn_02382B7C src/02382B7C.c wram
+02382BB8 10 fn_02382BB8 src/02382BB8.c wram
+02382BC8 40 fn_02382BC8 src/02382BC8.c wram
+02382C08 50 fn_02382C08 src/02382C08.c wram
+02382CB4 14 fn_02382CB4 src/02382CB4.c wram
+02382CC8 18 fn_02382CC8 src/02382CC8.c wram

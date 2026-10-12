@@ -1,0 +1,9 @@
+# AM9 absolute symbols: callees (other jobs own them) and data/pool addresses.
+fn_02382AC4 = 0x037FA95C
+fn_02380594 = 0x037F842C
+fn_02383024 = 0x037FAEBC
+fn_023830C8 = 0x037FAF60
+fn_02382AD4 = 0x037FA970
+word_3806FFC = 0x03806FFC
+word_3806FF8 = 0x03806FF8
+thumb_37FFFCD = 0x037FFFCD
