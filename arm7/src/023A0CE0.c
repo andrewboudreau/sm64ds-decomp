@@ -14,6 +14,7 @@ void fn_023A0CE0(unsigned short *a1, int a2, int a3) {
     int diff;
     unsigned int w9;
     int off2;
+    int pa2;
     base = *(char **)0x0380FFF4 + 0x4A0;
     a1[4] -= 24;
     for (i = 0; i < 3; i++) {
@@ -34,8 +35,8 @@ void fn_023A0CE0(unsigned short *a1, int a2, int a3) {
                 diff = w9 - w8;
                 if ((diff & 0x80000000) != 0)
                     return;
-                a2 = diff * lslot[1];
-                a3 = (int)a1[4] - a2;
+                pa2 = diff * lslot[1];
+                a3 = (int)a1[4] - pa2;
                 if (a3 == 0)
                     return;
                 if ((a3 & 0x80000000) == 0)
@@ -62,7 +63,7 @@ void fn_023A0CE0(unsigned short *a1, int a2, int a3) {
             fn_02394DF8((*(char **)0x0380FFF4 + 0x14C), (v12 - 8));
             *(unsigned short *)(base + off2) = 0;
         } else {
-            fn_02382C98((char *)&a1[18] + a2, (void *)((char *)v12 + 44 + w9), a3 + 1);
+            fn_02382C98((char *)&a1[18] + pa2, (void *)((char *)v12 + 44 + w9), a3 + 1);
             v12[8] = (unsigned short)sum;
             r = fn_0238D594(*a1 & 0xF0, 16);
             slot = base + off2;
