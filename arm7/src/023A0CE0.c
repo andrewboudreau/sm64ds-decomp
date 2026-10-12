@@ -4,6 +4,7 @@ extern int fn_02394D84(void *a1, void *a2, unsigned short *node) /* =0x027C6CFC 
 extern void fn_0239477C(int a1, int a2) /* =0x027C66F4 */;
 extern int fn_02394DF8(void *list, unsigned short *node) /* =0x027C6D70 */;
 
+#pragma opt_propagation off
 #pragma opt_common_subs off
 void fn_023A0CE0(unsigned short *a1, int a2, int a3) {
     unsigned short *v12;
