@@ -8,22 +8,10 @@ extern int fn_02394DF8(void *list, unsigned short *node) /* =0x027C6D70 */;
 #pragma opt_common_subs off
 void fn_023A0CE0(unsigned short *a1, int a2, int a3) {
     unsigned short *v12;
-    unsigned int sh;
     char *base;
-    unsigned int sum;
     unsigned int i;
-    unsigned int hi8;
-    unsigned int hi9;
     int off;
-    char *slot;
-    unsigned int w9;
-    int v13;
-    char *slot16;
-    int r;
-    unsigned int w8;
-    unsigned short cur;
     int diff;
-    unsigned int nib;
     base = *(char **)0x0380FFF4 + 0x4A0;
     a1[4] -= 24;
     for (i = 0; i < 3; i++) {
@@ -36,11 +24,9 @@ void fn_023A0CE0(unsigned short *a1, int a2, int a3) {
             && ((unsigned short *)a2)[5] == lslot[7]
             && ((unsigned short *)a2)[4] == lslot[6]
             && ((unsigned short *)a2)[3] == lslot[5]) {
-            w8 = ((unsigned short *)a2)[6];
-            hi8 = (w8 << 16) >> 20;
-            w9 = lslot[8];
-            hi9 = (w9 << 16) >> 20;
-            if (hi8 == hi9) {
+            unsigned int w8 = ((unsigned short *)a2)[6];
+            unsigned int w9 = lslot[8];
+            if (((w8 << 16) >> 20) == ((w9 << 16) >> 20)) {
                 diff = w9 - w8;
                 if ((diff & 0x80000000) != 0)
                     return;
@@ -48,13 +34,21 @@ void fn_023A0CE0(unsigned short *a1, int a2, int a3) {
                 a3 = (int)a1[4] - a2;
                 if (a3 == 0)
                     return;
-                if ((a3 & 0x80000000) != 0)
-                    return;
-                break;
+                if ((a3 & 0x80000000) == 0)
+                    break;
+                return;
             }
         }
     }
     if (i != 3) {
+        char *slot;
+        char *slot16;
+        unsigned short cur;
+        unsigned int sh;
+        int v13;
+        unsigned int sum;
+        int r;
+        unsigned int nib;
         off = i * 0x18;
         slot = base + off;
         v12 = (unsigned short *)(*(int *)(slot + 20) + 16);
