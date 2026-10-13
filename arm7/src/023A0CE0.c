@@ -30,12 +30,10 @@ void fn_023A0CE0(unsigned short *a1, unsigned short *a2, int a3) {
             && a2[5] == lslot[7]
             && a2[4] == lslot[6]
             && a2[3] == lslot[5]) {
-            unsigned int w8 = a2[6];
-            unsigned int hi8 = (w8 << 16) >> 20;
-            w9 = lslot[8];
-            unsigned int hi9 = (w9 << 16) >> 20;
+            unsigned int hi8 = ((unsigned int)a2[6] << 16) >> 20;
+            unsigned int hi9 = ((unsigned int)lslot[8] << 16) >> 20;
             if (hi8 == hi9) {
-                diff = w9 - w8;
+                diff = (int)lslot[8] - (int)a2[6];
                 if ((diff & 0x80000000) != 0)
                     return;
                 pa2 = diff * lslot[1];
